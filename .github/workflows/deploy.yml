@@ -22,9 +22,8 @@ jobs:
         run: npm install
  
       - name: Build Project
-        run:  npm run build
-        env:
-            CI:false
+        run: CI=false npm run build
+        
  
       - name: Sync files via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
