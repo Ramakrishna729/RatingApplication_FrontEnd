@@ -1,0 +1,35 @@
+[
+    {
+        "kpiMasterId":"f355889c-4bca-4c4c-9fe6-1c80d0b25bf5",
+        "masterDetails":{
+            "status":"Completed",
+            "to_date":"2025-09-03",
+            "kpi_type":"Monthly KPI",
+            "from_date":"2025-09-02",
+            "employee_id":"S003368",
+            "reviewer_id":"S000339",
+            "document_link":"https://google.com",
+            "reviewer_name":"Girisha N E"
+        },
+        "kpiDetails":[
+            {
+                "rating":"1",
+                "comment":"good",
+                "kpi_points":"Employee should initiate to take sesion on Saturday regarding topic which trainees have learned in that week",
+                "kpi_detail_uid":"0cccd662-7b30-4508-a443-c8f0e439fb46"
+            },
+            {
+                "rating":"10",
+                "comment":"goo",
+                "kpi_points":"Learn advance concept in sap fiori",
+                "kpi_detail_uid":"4548b045-ca68-43d9-acb8-7a635b524c90"
+            },
+            {
+                "rating":"10",
+                "comment":"goowwwww",
+                "kpi_points":"Client Feedback while releasing from project",
+                "kpi_detail_uid":"8002d9c0-3348-4ad8-b407-8828b71d877f"
+            }
+        ]
+    }
+]

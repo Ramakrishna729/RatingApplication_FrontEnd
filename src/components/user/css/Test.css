@@ -1,0 +1,7 @@
+iframe {    
+  width: 100px;
+  height: 100px;
+  background:#fff;
+  border: none;
+    border-radius: 50%;
+}

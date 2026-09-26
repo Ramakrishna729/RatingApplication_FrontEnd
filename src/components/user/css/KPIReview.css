@@ -1,0 +1,197 @@
+.monthlyMock-form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+.monthlyMock-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-left: 50px;
+  margin-right: 50px;
+}
+.monthlyMock-employee-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+.monthlyMock-profile-img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+}
+.monthlyMock-emp-details p {
+  margin: 2px 0;
+}
+.monthlyMock-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #9370db;
+  letter-spacing: 3px;
+  margin-top: 15px;
+  text-align: center;
+}
+.monthlyMock-form-body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  width: 60%;
+}
+.monthlyMock-form-row {
+  display: flex;
+  align-items: center;
+}
+.monthlyMock-form-label {
+  width: 500px;
+  font-weight: normal;
+  font-size: 14px;
+}
+.monthlyMock-select-field {
+  border: 1px solid #999;
+  min-width: 110px;
+  max-width: 200px;
+}
+.monthlyMock-comment-input {
+  margin-left: 15px;
+  padding: 4px 10px;
+  border: 1px solid #999;
+  font-size: 13px;
+  background: #fff;
+  max-width: 500px;
+}
+.monthlyMock-comment-btn:hover {
+  background: #f2f2f2;
+}
+.monthlyMock-feedback-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  margin-top: 10px;
+}
+.monthlyMock-feedback-textarea {
+  border: 1px solid #999;
+  width: 465px;
+  height: 80px;
+  padding: 5px;
+  resize: none;
+}
+.monthlyMock-rating-label {
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+.monthlyMock-rating-input {
+  border: 1px solid #999;
+  width: 80px;
+  padding: 3px;
+}
+.monthlyMock-submit-btn {
+  margin-top: 15px;
+  padding: 6px 15px;
+  border: 1px solid #999;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  width: auto;
+  align-self: flex-start;
+}
+.monthlyMock-submit-btn:hover {
+  background: #f2f2f2;
+}
+.monthlyMock-mandatory {
+  color: red;
+}
+.error-border {
+  border: 2px solid #ff0000 !important;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
+input[type="text"],
+input[type="file"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 0px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.monthlyMock-number-field {
+  width: 88px;
+  padding: 6px 8px;
+  border: 1px solid var(--mm-border, #ccc);
+  border-radius: 8px;
+  font: inherit;
+}
+
+.monthlyMock-number-field:focus {
+  outline: none;
+  border-color: var(--mm-focus, #6aa0ff);
+  box-shadow: 0 0 0 3px rgba(106,160,255,0.15);
+}
+
+.monthlyMock-help {
+  font-size: 12px;
+  opacity: 0.75;
+  margin-left: 8px;
+}
+
+
+
+/* Meta row horizontal layout */
+.monthlyMock-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;          /* row x column gap */
+  align-items: center;
+  padding: 12px 14px;
+  background: var(--mm-meta-bg, #fafafa);
+  border: 1px solid var(--mm-border, #e6e6e6);
+  border-radius: 12px;
+  margin: 12px 0 18px;
+}
+
+.monthlyMock-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+}
+
+/* Date inputs inside meta row */
+.monthlyMock-meta-date label {
+  margin-right: 6px;
+}
+
+.monthlyMock-date-input {
+  height: 36px;
+  padding: 6px 10px;
+  border: 1px solid var(--mm-border, #ccc);
+  border-radius: 8px;
+  font: inherit;
+}
+
+.monthlyMock-date-input:focus {
+  outline: none;
+  border-color: var(--mm-focus, #6aa0ff);
+  box-shadow: 0 0 0 3px rgba(106,160,255,0.15);
+}
+
+/* Reuse your existing .error-border if present */
+.error-border {
+  border-color: #e5484d !important;
+  box-shadow: 0 0 0 3px rgba(229,72,77,0.12);
+}
+
+/* Small screens: make each item take full width if needed */
+@media (max-width: 640px) {
+  .monthlyMock-meta-item {
+    width: 100%;
+  }
+}

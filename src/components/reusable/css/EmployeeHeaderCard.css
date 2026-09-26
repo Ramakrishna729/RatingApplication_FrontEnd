@@ -1,0 +1,95 @@
+.empHeader {
+  width: 100%;
+  display: flex;
+  gap: 24px;                 /* tighter spacing */
+  align-items: center;
+  padding: 12px 16px;        /* compact padding */
+  box-sizing: border-box;
+  border-bottom: 1px solid #e6e6e6;
+  background: #fff;
+}
+
+.empHeader__left { flex: 0 0 auto; }
+
+.empHeader__avatar {
+  width: 160px;
+  height: 120px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  background: #f3f4f6;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+.empHeader__right {
+  flex: 1 1 auto;
+  display: grid;             /* grid makes the two blocks align cleanly */
+  grid-template-columns: 1fr auto;  
+  column-gap: 32px;
+  align-items: start;
+  min-width: 0;
+}
+
+.empHeader__grid {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+  max-width: 420px;          /* allow a bit more room */
+}
+
+.empHeader__grid--right { justify-self: end; }
+
+.empHeader__row {
+  display: inline-grid;
+  grid-template-columns: max-content 12px auto;
+  align-items: baseline;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.empHeader__label { font-weight: 700; color: #222; letter-spacing: 0.3px; }
+.empHeader__sep   { color: #666; }
+.empHeader__value { color: #333; }
+
+.empHeader__link {
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+}
+.empHeader__link:hover { border-bottom-color: #333; }
+
+/* Error + actions */
+.empHeader__error { margin-left: auto; font-size: 0.875rem; color: #b00020; }
+.empHeader__retry {
+  margin-left: 8px;
+  background: transparent;
+  border: 1px solid #b00020;
+  color: #b00020;
+  padding: 2px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.empHeader__retry:hover { background: rgba(176,0,32,0.06); }
+
+/* Loading shimmer */
+.is-loading .empHeader__label,
+.is-loading .empHeader__value { color: transparent; position: relative; }
+.is-loading .empHeader__label::after,
+.is-loading .empHeader__value::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1em;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #eee, #f5f5f5, #eee);
+  animation: empHeaderShimmer 1.2s infinite;
+}
+@keyframes empHeaderShimmer { 0%{opacity:.8;transform:translateX(-8%)} 50%{opacity:1;transform:translateX(0)} 100%{opacity:.8;transform:translateX(8%)} }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .empHeader { gap: 16px; padding: 10px 12px; }
+  .empHeader__avatar { width: 140px; height: 105px; }
+  .empHeader__right { grid-template-columns: 1fr; row-gap: 10px; }
+  .empHeader__grid--right { justify-self: start; }
+}

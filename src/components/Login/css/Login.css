@@ -1,0 +1,121 @@
+/* Login.css */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: white;
+}
+
+.login-container {
+  display: flex;
+  min-height: 97vh;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  position: relative;
+  overflow-x: hidden;
+ 
+ 
+}
+
+.login-left {
+  flex: 1;
+  text-align: center;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.quote {
+  font-size: 18px;
+  color: #333;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.author {
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.login-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-heading {
+  font-size: 32px;
+  margin-bottom: 30px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  width: 60%;
+  text-align: center;
+  color: #222;
+}
+
+.login-right .login-input-box {
+  width: 60%;
+  padding: 14px 30px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+
+
+.forgot-password {
+  align-self: flex-end;
+  margin-right: 15%;
+  font-size: 14px;
+  color: #0066ff;
+  text-decoration: none;
+  margin-bottom: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.login-button {
+  background-color: #0a63ff;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 68%;
+}
+.login-button:hover {
+  background-color: #005bb5;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #0a63ff;
+  color: white;
+  padding: 12px 0;
+  font-size: 16px;
+}
+
+input::placeholder{
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  margin: 5px 0;
+  font-size: 0.9rem;
+} 

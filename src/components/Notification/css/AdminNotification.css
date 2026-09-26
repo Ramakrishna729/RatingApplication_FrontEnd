@@ -1,0 +1,209 @@
+:root {
+  --adminNotif-accent: #5CA4A9;
+  --adminNotif-text: #222;
+  --adminNotif-muted: #666;
+  --adminNotif-border: #e5e7eb;
+  --adminNotif-bg: #ffffff;
+  --adminNotif-overlay: rgba(0, 0, 0, 0.4);
+  --adminNotif-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay & container */
+.adminNotif-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--adminNotif-overlay);
+  z-index: 1000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.adminNotif-popup {
+  width: 90vw;
+  max-width: 1000px;
+  max-height: 90vh;
+  background: var(--adminNotif-bg);
+  border-radius: 10px;
+  box-shadow: var(--adminNotif-shadow);
+  padding: 20px;
+  overflow: hidden; /* header fixed + content scroll */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.adminNotif-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.adminNotif-title {
+  margin: 0;
+  color: var(--adminNotif-accent);
+  font-style: italic;
+  font-size: 20px;
+}
+
+.adminNotif-closeBtn {
+  background: transparent;
+  border: none;
+  color: #333;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.adminNotif-closeBtn:hover {
+  background: #f3f4f6;
+}
+
+/* Search */
+.adminNotif-search {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 6px 0 14px;
+  outline: none;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.adminNotif-search:focus {
+  border-color: var(--adminNotif-accent);
+  box-shadow: 0 0 0 3px rgba(92, 164, 169, 0.2);
+}
+
+/* Table */
+.adminNotif-tableWrap {
+  overflow: auto;
+  border: 1px solid var(--adminNotif-border);
+  border-radius: 10px;
+}
+
+.adminNotif-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.adminNotif-table thead th {
+  position: sticky;
+  top: 0;
+  background: #fafafa;
+  z-index: 1;
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+  border-bottom: 2px solid #ddd;
+  color: var(--adminNotif-muted);
+}
+
+.adminNotif-table tbody td {
+  padding: 12px;
+  border-bottom: 1px solid var(--adminNotif-border);
+  color: var(--adminNotif-text);
+  vertical-align: middle;
+}
+
+.adminNotif-table tbody tr:hover {
+  background: #fbfbfb;
+}
+
+/* Actions */
+.adminNotif-actions {
+  width: 1%;
+  white-space: nowrap;
+}
+
+.adminNotif-iconBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--adminNotif-accent);
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+.adminNotif-iconBtn:hover {
+  background: #f3f4f6;
+}
+
+.adminNotif-iconBtn.isDisabled,
+.adminNotif-iconBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Status pill */
+.adminNotif-status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  border: 1px solid transparent;
+}
+
+.adminNotif-status.is-accepted {
+  background: #e6f9f1;
+  color: #0B7F5F;
+  border-color: #b9eadb;
+}
+
+.adminNotif-status.is-pending {
+  background: #fff7e6;
+  color: #8c6d1f;
+  border-color: #ffe1a6;
+}
+
+.adminNotif-status.is-rejected {
+  background: #ffeeee;
+  color: #a23b3b;
+  border-color: #f3c2c2;
+}
+
+.adminNotif-status.is-completed {
+  background: #eef4ff;
+  color: #2f5fb8;
+  border-color: #c9d8fb;
+}
+
+.adminNotif-status.is-default {
+  background: #f3f4f6;
+  color: #374151;
+  border-color: #e5e7eb;
+}
+
+/* Empty / states */
+.adminNotif-empty,
+.adminNotif-state {
+  padding: 18px;
+  text-align: center;
+  color: var(--adminNotif-muted);
+}
+
+.adminNotif-error {
+  color: #a23b3b;
+}
+
+/* Responsive: tighten padding on small screens */
+@media (max-width: 640px) {
+  .adminNotif-title {
+    font-size: 18px;
+  }
+  .adminNotif-popup {
+    padding: 16px;
+  }
+  .adminNotif-table {
+    min-width: 600px; /* still scrolls horizontally if needed */
+  }
+}

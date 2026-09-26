@@ -1,0 +1,111 @@
+.eh-root {
+  background: #fff;
+}
+
+.eh-wrapper {
+  padding: 24px;
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+/* Skeleton (loading) */
+.eh-skeleton {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.eh-skel-line {
+  height: 12px;
+  border-radius: 8px;
+  background: #eee;
+  margin-bottom: 12px;
+}
+.eh-skel-line.short {
+  width: 80%;
+}
+.eh-skel-box {
+  height: 200px;
+  border-radius: 12px;
+  background: #f6f6f6;
+  border: 1px solid #eaeaea;
+}
+
+/* Error card */
+.eh-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 16px;
+}
+.eh-error-title {
+  margin: 0;
+}
+.eh-error-msg {
+  margin-top: 6px;
+}
+.eh-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  transition: background 120ms ease, box-shadow 120ms ease;
+}
+.eh-btn:hover {
+  background: #f7f7f7;
+}
+
+/* Profile header */
+.eh-profile {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.eh-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+}
+
+.eh-section {
+  flex: 1;
+  min-width: 260px;
+}
+
+.eh-title {
+  margin: 0;
+  font-size: 22px;
+}
+
+.eh-subtitle {
+  margin-top: 0;
+}
+
+.eh-row {
+  margin: 6px 0;
+}
+
+/* Compact buttons/links that may appear inside ReviewTable can adopt these */
+.eh-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid #e6e6e6;
+  font-size: 12px;
+}
+
+/* Small utility helpers */
+.hidden { display: none !important; }
+.m-0 { margin: 0 !important; }
+.mt-6 { margin-top: 6px !important; }
+.mb-16 { margin-bottom: 16px !important; }
