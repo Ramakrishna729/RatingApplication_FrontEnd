@@ -3,6 +3,7 @@ import React, { useEffect, useMemo, useState, useCallback } from 'react';
 import { FaPlus } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import AddEmployeePopup from '../popups/AddEmployeePopup';
+import { BASE_URL } from '../../utils/config';
 import './css/EmployeeTable.css';
 
 const SAFE = (v) => (typeof v === 'string' ? v : v == null ? '' : String(v));
@@ -28,7 +29,7 @@ const EmployeeTable = () => {
   const navigate = useNavigate();
 
   // 🔹 DIRECT API endpoint
-  const API_URL = 'http://localhost:3000/api/admin/employees';
+  const API_URL = `${BASE_URL}/admin/employees`;
 
   const fetchEmployees = useCallback(async () => {
     setLoading(true);
