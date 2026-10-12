@@ -2,6 +2,8 @@ import React, { useEffect, useMemo, useState, useCallback, useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
 import './css/PreviousEmployeeTable.css';
 import HeaderBar from '../reusable/HeaderBar';
+import { BASE_URL } from "../../utils/config"
+
 
 // Utils
 const SAFE = (v) => (typeof v === 'string' ? v : v == null ? '' : String(v));
@@ -42,7 +44,7 @@ export default function PreviousEmployeeTable({
   // Optional API base override (defaults to localhost)
   apiBase = import.meta?.env?.VITE_API_BASE || 'http://localhost:3000',
 }) {
-  const API_URL = `${apiBase.replace(/\/$/, '')}/api/admin/PreviousEmployees`;
+  const API_URL = `${BASE_URL}/api/admin/PreviousEmployees`;
 
   const [employees, setEmployees] = useState([]);
   const [rawSearch, setRawSearch] = useState('');

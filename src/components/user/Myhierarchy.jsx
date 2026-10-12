@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import "./css/Myhierarchy.css"; // make sure this path matches your project structure
 import ReviewTable from "../mocks and KPI/ReviewTable";
 import HeaderBar from "../reusable/HeaderBar";
+import { BASE_URL } from "../../utils/config"; // Adjust the path as necessary
 
 // MasterDetail component (uses the same markup as before). It imports styles from MasterDetail.css.
 const colorPalette = [
@@ -42,8 +43,7 @@ export default function Myhierarchy() {
   useEffect(() => {
     debugger
     try {
-      const response = fetch(`http://localhost:3000/api/employee/${EmployeeId}/hierarchy`
-      )
+      const response = fetch(`${BASE_URL}/employee/${EmployeeId}/hierarchy`)
         .then((res) => res.json())
         .then((data) => {
           setItems(data);

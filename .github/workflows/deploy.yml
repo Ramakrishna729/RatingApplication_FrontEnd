@@ -23,7 +23,10 @@ jobs:
  
       - name: Build Project
         run: CI=false npm run build
+<<<<<<< Updated upstream
         
+=======
+>>>>>>> Stashed changes
  
       - name: Sync files via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
